@@ -1,0 +1,29 @@
+                                        SaaS
+
+¿Que es SaaS? (Syntactically Awesome Stylesheets)
+
+Es un lenguaje escrito en Ruby (lenguaje de Backend)
+Facilita escribir estilos CSS para evitar repetir reglas.
+Se le saca jugo en proyectos grandes, en pequeños proyectos no, porque escribirás más código que el propio CSS.
+Exactamente es un pre-procesador, con bucles, importación de bloques de códigos, variables, entre otras.
+No es interpretable por el navegador, por lo que es necesario compilarlo. 
+
+Curiosidades:
+Hay un competidor que ScsS,y otros que son para generar plantilla de HTML como Haml, que haría como hace Emmet aquí en Visual Code.
+
+
+Instalación.
+Necesitamos instalar Live Sass Compiler para VSCode, en el área de extensiones.
+
+Una vez instalado, configuramos
+Engranaje (Administrar) => Configuración => "sass:format" => "Live Sass Compile > Settings:Format" (Editar en JSon) =>
+Incluimos esta línea:
+    "savePath": "~/../css"
+    (eliminamos el otro parámetro con null y cerramos el corchete ahi)
+
+
+Ya en el proyecto.
+Creamos la carpeta "scss", revisaremos que en el HTML esté linkeada a la ruta de estilo:
+<link rel="stylesheet" href="./css/style.css">
+
+Y creamos la carpeta style "scss"; dentro a su vez el archivo style.scss

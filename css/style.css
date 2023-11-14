@@ -1,6 +1,7 @@
-:root {
+/* :root {
     font-size: 0.785rem;
-    /* font-family: (Indicar fuente); */
+     /* font-family: (Indicar fuente); */
+    /*
     vertical-align: baseline;
     --blue: #0d6edf;
     --indigo: #6610f2;
@@ -17,8 +18,9 @@
 }
 
 *,::before,::after{
+    box-sizing: border-box;
+    outline: 0 none;
     margin: 0;
     padding: 0;
     border: 0;
-    box-sizing: inherit;
-}
+} */
