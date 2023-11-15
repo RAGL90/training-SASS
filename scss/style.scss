@@ -1,3 +1,11 @@
-body{
-    background-color: darkgreen;
+@import "./functions";
+@import "./maps";
+@import "./mixins";
+@import "./reset";
+@import "./variables";
+
+// Generics
+:root{
+    font-size: 0.785rem;
+    box-sizing: border-box;//Esto se hace para que cuando cargue la caja, no se sume ni el paddin ni el borde, este tamaño sea incluyendo a ambos.
 }
