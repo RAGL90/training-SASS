@@ -9,7 +9,7 @@ Exactamente es un pre-procesador, con bucles, importación de bloques de código
 No es interpretable por el navegador, por lo que es necesario compilarlo. 
 
 Curiosidades:
-Hay un competidor que ScsS,y otros que son para generar plantilla de HTML como Haml, que haría como hace Emmet aquí en Visual Code.
+Hay otros que son para generar plantilla de HTML como Haml, que haría como hace Emmet aquí en Visual Code.
 
 
 Instalación.
@@ -22,8 +22,22 @@ Incluimos esta línea:
     (eliminamos el otro parámetro con null y cerramos el corchete ahi)
 
 
-Ya en el proyecto.
+                    Preparamos el proyecto para usar SaaS
 Creamos la carpeta "scss", revisaremos que en el HTML esté linkeada a la ruta de estilo:
 <link rel="stylesheet" href="./css/style.css">
 
 Y creamos la carpeta style "scss"; dentro a su vez el archivo style.scss
+
+Cogeremos style.css y comentaremos su contenido heredado del project-template.
+
+Ante de hacer ningun cambio, abriremos el terminal y escribiremos "git init".
+
+Ya podemos escribir en el archivo scss.
+
+
+                    Usando Scss.
+
+Tendremos el archivo scss a la izq de la pantalla y style.css a la dcha.
+Abajo en la barra azul del VSCode hay un área que Watch css, le haremos click y comenzará a compilarlo
+
+En Scss se puede escribir css normal, y directamente lo enviará al archivo CSS.
