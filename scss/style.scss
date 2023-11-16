@@ -7,19 +7,17 @@
 
 // Generics
 :root {
-  font-size: map-get($map: $font-sizes, $key: "initial");
+  font-size: fs("medium"); //Usamos functions para indicar el tamaño del mapa
   box-sizing: border-box; //Esto se hace para que cuando cargue la caja, no se sume ni el paddin ni el borde, este tamaño sea incluyendo a ambos.
 }
 body {
   background-color: $bg-color;
-  padding: nth($padding, 3) nth($padding, -1); //nth nombre de la lista, y valor de la lista: -1 = ultimo valor del array de _list
-  font-family: $titillium;
-  font-weight: map-get($map: $titillium-fw, $key: "Regular");
-  h1 {
-    font-family: $rubik;
-    font-weight: map-get($map: $rubik-fw, $key: "Black");
-  }
-  .main {
+  //padding: nth($padding, 3) nth($padding, -1); //nth nombre de la lista, y valor de la lista: -1 = ultimo valor del array de _list
+  padding: getPadding(3) getPadding(-1);
+  font-family: getFont(true); //Sin espacios para darle valor 
+  font-weight: ttl-fw("regular");
+ 
+.main {
     width: 80%;
     border-radius: $br-1;
     border: 1px solid $dark;
@@ -33,7 +31,13 @@ body {
     background-repeat: no-repeat;
     //Para declarar main-header, como header está dentro de main se concatena con "&"
     &-header {
-      font-size: map-get($map: $font-sizes,$key: "xx-large"); //Es más correcto poner xx-large con comillas
+        font-size: map-get($map: $font-sizes,$key: "xx-large"); //Es más correcto poner xx-large con comillas
+        font-weight: ttl-fw("black");
+        font-family: getFont(false);
+        transition: color .3s ease-in-out;
+        &:hover{
+            color: $orange;
+        }
     }
   }
 }

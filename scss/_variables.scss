@@ -28,10 +28,10 @@ $file-extension: ".jpg";
 $path: $base-path + $file-name + $file-extension;
 
 //Valores Numericos
-$margin-top: 30 * 1px; //multiplicamos el valor por valores px para darle formato px
+$margin-top: 30 * 1px; //Multiplicamos el valor por valores px para darle formato px
 $mt-3: 5 * 1em; //Valores em
 $mt-2: 3em; //Valores em
 
 //Tras hacer los _maps e ingresarlo en Index - Declaramos las fuentes:
-$titillium: 'Titillium Web', sans-serif;
 $rubik: 'Rubik', sans-serif;
+$titillium: 'Titillium Web', sans-serif;

@@ -1,0 +1,27 @@
+//Usar el map-get sin tener que escribir todos los parámetros (ahorrar el chorizo)
+@function fs($size){ //fs por Font Size
+    @return map-get($map:$font-sizes, $key: $size);
+}
+
+//Funcion para elegir el grosor de lineas
+@function ttl-fw($weight){ // Titilium-Fw
+    @return map-get($map:$titillium-fw, $key: $weight);
+}
+@function rbk-fw($weight){ // Rubik-Fw
+    @return map-get($map:$rubik-fw, $key: $weight);
+}
+
+//Funcion para la lista padding indicando la posicion que queremos
+@function getPadding ($position){
+    @return nth($list:$padding, $n: $position);
+}
+
+//Condicional en funcion de un valor u otro nos dará la fuente titillium o rubik
+@function getFont($isrubik){
+    @if ($isrubik == true){
+        @return $rubik;
+    }
+    @else{
+        @return $titillium;
+    }
+}

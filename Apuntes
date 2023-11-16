@@ -51,3 +51,4 @@ Listas, son para crear variables tipo arrays.
 Mapas son una mezcla de array y objetos JSON, tienen propiedades y valores. Se usan como arrays.
 
 
+Funciones => Son como funciones en Javascript.
