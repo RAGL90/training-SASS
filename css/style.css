@@ -19,7 +19,7 @@ body {
   font-weight: 400;
 }
 body h1 {
-  font-family: "Titillium Web", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-weight: 900;
 }
 body .main {
@@ -30,6 +30,11 @@ body .main {
   margin: 2em auto;
   margin-top: 30px;
   margin-top: 5em;
-  background-color: wheat;
   background-image: url("../img/logo.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+body .main-header {
+  font-size: 3.5rem;
 }/*# sourceMappingURL=style.css.map */
