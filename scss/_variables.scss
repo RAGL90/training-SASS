@@ -12,9 +12,25 @@ $cyan: #0dcaf0;
 $dark: #292a2b;
 $black: #000;
 $green-white: #edf4eb;
+$dark-green: darkolivegreen; //Color ya predeterminado en CSS
 $gray: #adb5bd;
 
 $full-width: 100vw;
 $full-height: 100vh;
 
 $bg-color: $green; //Una variable que asigna a otra
+$br-1: .3rem;
+
+//Concatenaciones de Strings - Suele usarse para URL
+$base-path: "../img/";
+$file-name: "logo";
+$file-extension: ".jpg";
+$path: $base-path + $file-name + $file-extension;
+
+//Valores Numericos
+$margin-top: 30 * 1px; //multiplicamos el valor por valores px para darle formato px
+$mt-3: 5 * 1em; //Valores em
+
+//Tras hacer los _maps e ingresarlo en Index - Declaramos las fuentes:
+$titillium: 'Titillium Web', sans-serif;
+$rubik: 'Rubik', sans-serif;

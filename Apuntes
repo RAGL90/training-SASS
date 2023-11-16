@@ -45,3 +45,8 @@ Tendremos el archivo scss a la izq de la pantalla y style.css a la dcha.
 Abajo en la barra azul del VSCode hay un área que Watch css, le haremos click y comenzará a compilarlo
 
 En Scss se puede escribir css normal, y directamente lo enviará al archivo CSS.
+
+Listas, son para crear arrays.
+
+Mapas son una mezcla de array y objetos JSON, tienen propiedades y valores. Se usan como arrays.
+
