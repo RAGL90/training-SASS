@@ -19,7 +19,7 @@ body {
 }
 body .main {
   width: 80%;
-  border-radius: 0.3rem;
+  border-radius: 0.2rem, 0.3rem, 0.5rem, 0.8rem, 1rem 1;
   border: 1px solid #292a2b;
   padding: 1em 2em;
   margin: 2em auto;
@@ -28,7 +28,6 @@ body .main {
   background-image: url("../img/logo.jpg");
   background-position: center center;
   background-size: cover;
-  background-repeat: no-repeat;
 }
 body .main-header {
   font-size: 3.5rem;
@@ -37,4 +36,30 @@ body .main-header {
 }
 body .main-header:hover {
   color: #fd7e14;
+}
+body .message, body .message-warning, body .message-success, body .message-danger, body .message-info {
+  padding: 0.5em 1.5em;
+  border-radius: 0.3rem;
+  width: 70%;
+  margin: 1em auto;
+}
+body .message-info {
+  color: #063367;
+  background-color: #2c88f3;
+  border: 1px solid #0d6edf;
+}
+body .message-danger {
+  color: #7c151f;
+  background-color: #e4606d;
+  border: 1px solid #dc3545;
+}
+body .message-success {
+  color: #051b11;
+  background-color: #21b26f;
+  border: 1px solid #198754;
+}
+body .message-warning {
+  color: #876500;
+  background-color: #ffce3a;
+  border: 1px solid #ffc107;
 }/*# sourceMappingURL=style.css.map */

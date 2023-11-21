@@ -19,7 +19,7 @@ body {
  
 .main {
     width: 80%;
-    border-radius: $br-1;
+    border-radius: $radius(1);
     border: 1px solid $dark;
     padding: 1em 2em;
     margin: 2em auto;
@@ -28,7 +28,6 @@ body {
     background-image: url(getImg("logo","jpg")); //Se indica el nombre y el formato del archivo (Siempre que esté en la carpeta "img")
     background-position: center center;
     background-size: cover;
-    background-repeat: no-repeat;
     //Para declarar main-header, como header está dentro de main se concatena con "&"
     &-header {
         font-size: map-get($map: $font-sizes,$key: "xx-large"); //Es más correcto poner xx-large con comillas
@@ -40,4 +39,28 @@ body {
         }
     }
   }
+  .message{
+    padding: getPadding(2) getPadding(4);
+    border-radius: getRadius(2);
+    width: 70%;
+    margin: 1em auto;
+
+  }
+  .message-info{
+    @extend .message; //Coger todos los parámetros de .message
+    @include color-theme ($blue);
+  }
+  .message-danger{
+    @extend .message;
+    @include color-theme ($red);
+  }
+  .message-success{
+    @extend .message;
+    @include color-theme ($green);
+  }
+  .message-warning{
+    @extend .message;
+    @include color-theme ($yellow);
+  }
 }
+

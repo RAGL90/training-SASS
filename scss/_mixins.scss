@@ -1,0 +1,8 @@
+//Son como @extends, pueden recibir parámetros y recibir su contenido de forma dinámica
+//No es una funcion, no se puede escribir condicionales, ni returns, solo CSS.
+//Indicamos con simplicidad en colorth (color theme) el color que buscamos.
+@mixin color-theme($color-th){ 
+    color: darken($color: $color-th, $amount: 25%);
+    background-color: lighten($color: $color-th, $amount: 10%);
+    border: 1px solid $color-th;
+}

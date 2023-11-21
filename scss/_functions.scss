@@ -15,6 +15,10 @@
 @function getPadding ($position){
     @return nth($list:$padding, $n: $position);
 }
+//Funcion para la lista radius indicando la posicion que queremos
+@function getRadius ($RadPosition){
+    @return nth($list:$radius, $n: $RadPosition);
+}
 
 //Condicional en funcion de un valor u otro nos dará la fuente titillium o rubik
 @function getFont($isrubik){
