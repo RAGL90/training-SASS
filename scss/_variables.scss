@@ -1,4 +1,5 @@
 //Declaracion de Vbles.
+//Mapa de colores base
 $blue: #0d6edf;
 $indigo: #6610f2;
 $purple: #6f42c1;
@@ -15,17 +16,19 @@ $green-white: #edf4eb;
 $dark-green: darkolivegreen; //Color ya predeterminado en CSS
 $gray: #adb5bd;
 
+// Ancho y alto al 100% del Viewport
 $full-width: 100vw;
 $full-height: 100vh;
 
+//Probamos posibilidades de Sass - Creación de Variable.
 $bg-color: $green; //Una variable que asigna a otra
 $br-1: .3rem;
 
 //Concatenaciones de Strings - Suele usarse para URL
 $base-path: "../img/";
-$file-name: "logo";
-$file-extension: ".jpg";
-$path: $base-path + $file-name + $file-extension;
+// $file-name: "logo";  Las desactivamos porque las usamos en función
+// $file-extension: ".jpg";
+//$path: $base-path + $file-name + $file-extension;
 
 //Valores Numericos
 $margin-top: 30 * 1px; //Multiplicamos el valor por valores px para darle formato px

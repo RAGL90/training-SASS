@@ -25,7 +25,7 @@ body {
     margin: 2em auto;
     margin-top: $margin-top;
     margin-top: $mt-3;
-    background-image: url($path);
+    background-image: url(getImg("logo","jpg")); //Se indica el nombre y el formato del archivo (Siempre que esté en la carpeta "img")
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;

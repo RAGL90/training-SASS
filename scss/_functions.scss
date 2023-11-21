@@ -21,7 +21,15 @@
     @if ($isrubik == true){
         @return $rubik;
     }
-    @else{
+    @else if ($isrubik == false){
         @return $titillium;
+    }@else{
+        @return "Verdana";
     }
+}
+
+//Constructor de rutas o pathing de imagenes
+@function getImg($file-name,$file-extension){
+    $path: $base-path + $file-name + "." + $file-extension;
+    @return $path;
 }
