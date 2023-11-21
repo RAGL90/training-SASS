@@ -1,22 +1,64 @@
 @import "./reset";
+@import "./variables";
+@import "./lists";
 @import "./functions";
 @import "./maps";
 @import "./mixins";
-@import "./lists";
-@import "./variables";
 
 // Generics
 :root {
   font-size: fs("medium"); //Usamos functions para indicar el tamaño del mapa
   box-sizing: border-box; //Esto se hace para que cuando cargue la caja, no se sume ni el paddin ni el borde, este tamaño sea incluyendo a ambos.
 }
+@each $header, $value in $header-sizes{
+  #{$header}{
+    font-size: #{$value};
+  }
+}
+
+$headers:"";
+$start: 1;
+$end: 6;
+@while $start <= $end{
+  $headers: $headers + h#{$start}+", ";
+  $start: $start + 1;
+}
+
+#{$headers}{
+  font-family: getFont(false);
+}
+
+
 body {
+  &.light{
+    @include theme(false); //Espera un true o false
+  }
   background-color: $bg-color;
   //padding: nth($padding, 3) nth($padding, -1); //nth nombre de la lista, y valor de la lista: -1 = ultimo valor del array de _list
   padding: getPadding(3) getPadding(-1);
   font-family: getFont(true); //Sin espacios para darle valor 
   font-weight: ttl-fw("regular");
- 
+
+.header{
+  background-color: $dark;
+  border-radius: getRadius(3);
+  padding: getPadding(2) getPadding(4);
+  nav{
+    width: 50%;
+  }
+  ul{
+    @include flexCenter(space-between);
+  }
+  li{
+    background-color: $yellow;
+    padding: getPadding(2) getPadding(3);
+    border-radius: getRadius(1);
+  }
+  a{
+    color: darken($color: $dark, $amount: 10%);
+  }
+  
+}
 .main {
     width: 80%;
     border-radius: $radius(1);
@@ -62,5 +104,15 @@ body {
     @extend .message;
     @include color-theme ($yellow);
   }
+  p {
+    padding: getPadding(2) getPadding(3);
+    border-radius: getRadius(2);
+    font-size: fs("medium");
+    @for $value from 1 through length($rainbow){
+      //Va a revisar desde el número 1 de los hijos hasta el último de la lista Rainbow
+      &:nth-child(#{$value}){
+        background-color: getRColor($value);
+      }
+    }
+  }
 }
-

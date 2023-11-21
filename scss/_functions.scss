@@ -37,3 +37,7 @@
     $path: $base-path + $file-name + "." + $file-extension;
     @return $path;
 }
+
+@function getRColor ($num){
+    @return nth($rainbow, $num);
+}

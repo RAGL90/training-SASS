@@ -6,3 +6,23 @@
     background-color: lighten($color: $color-th, $amount: 10%);
     border: 1px solid $color-th;
 }
+//Crear flexCenter($justify) y flexBetween($justify)
+
+/* Mi intento: */
+@mixin flexCenter($justify){
+    display: flex;
+    justify-content: $justify;
+    align-items: center;
+}
+@mixin flexDirection($direction){
+    display: flex;
+    flex-direction: $direction;
+}
+@mixin theme($lightTheme:default){ //Es un parámetro por defecto, si no está en llamada se aplica este valor por defecto
+    @if ($lightTheme==true) {
+        background-color: lighten($bg-color, 50%);
+        p{
+            color: darken($color: $bg-color, $amount: 25%) !important; //Metemos important para asegurar que se va respetar esta regla
+        }
+    }
+}

@@ -5,17 +5,68 @@
   border: 0;
   box-sizing: inherit;
   outline: 0 none;
+  list-style: none;
 }
 
+/* Mi intento: */
 :root {
   font-size: 1rem;
   box-sizing: border-box;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2.25rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.1rem;
+}
+
+h5 {
+  font-size: 0.9rem;
+}
+
+h6 {
+  font-size: 0.7rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Titillium Web", sans-serif;
 }
 
 body {
   background-color: #198754;
   padding: 1em 3em;
   font-family: "Rubik", sans-serif;
+}
+body .header {
+  background-color: #292a2b;
+  border-radius: 0.5rem;
+  padding: 0.5em 1.5em;
+}
+body .header nav {
+  width: 50%;
+}
+body .header ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .header li {
+  background-color: #ffc107;
+  padding: 0.5em 1em;
+  border-radius: 0.2rem;
+}
+body .header a {
+  color: #101111;
 }
 body .main {
   width: 80%;
@@ -62,4 +113,24 @@ body .message-warning {
   color: #876500;
   background-color: #ffce3a;
   border: 1px solid #ffc107;
+}
+body p {
+  padding: 0.5em 1em;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+}
+body p:nth-child(1) {
+  background-color: #6f42c1;
+}
+body p:nth-child(2) {
+  background-color: #0dcaf0;
+}
+body p:nth-child(3) {
+  background-color: #198754;
+}
+body p:nth-child(4) {
+  background-color: #ffc107;
+}
+body p:nth-child(5) {
+  background-color: #fd7e14;
 }/*# sourceMappingURL=style.css.map */
